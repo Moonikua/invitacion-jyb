@@ -13,10 +13,19 @@
     <a href="https://waze.com/ul/h66j4d4201" target="_blank">📍 Llegar con Waze</a>
     <a href="https://milistadenovios.cl/enviar-regalo?id=26987" target="_blank">🎁 Enviar Regalo</a>
   </div>
+  <!-- Botón personalizado para reproducir música -->
+  <button class="btn-musica" onclick="document.getElementById('bg-music').play(); this.style.display='none'">
+    ▶ Reproducir música
+  </button>
 
-  <audio autoplay loop>
+  <!-- Audio oculto (solo se activa si el usuario hace clic) -->
+  <audio id="bg-music" loop>
     <source src="ensename-a-vivir.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
+
+  <!-- <audio autoplay loop>
+    <source src="ensename-a-vivir.mp3" type="audio/mpeg">
+  </audio> -->
 </body>
 </html>
