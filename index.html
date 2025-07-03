@@ -16,7 +16,7 @@
   </div>
 
  <div class="control-musica">
-    <a href="#" class="btn-musica-toggle" onclick="toggleMusica(event)" title="Activar/Desactivar música">🎵</a>
+    <a href="#" class="btn-musica-toggle" onclick="toggleMusica(event)" title="Activar/Desactivar música">🎵 Activar Musica</a>
   </div>
 
 
@@ -27,14 +27,14 @@
   </audio>
 
  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('bg-music');
+    const btn = document.querySelector('.btn-musica-toggle');
 
-  <!-- Script para reproducción tras interacción -->
-  <script>
-    function toggleMusica(event) {
-      event.preventDefault();
-      const audio = document.getElementById('bg-music');
-      const btn = document.querySelector('.btn-musica-toggle');
+    let primerClick = true;
 
+    function toggleMusica() {
       if (audio.paused) {
         audio.play().then(() => {
           btn.textContent = '🔇';
@@ -44,7 +44,22 @@
         btn.textContent = '🎵';
       }
     }
-  </script>
+
+    // Al hacer clic en el botón 🎵
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleMusica();
+    });
+
+    // Primer clic en cualquier parte de la pantalla (para activar la música)
+    document.addEventListener('click', function primerInteraccion() {
+      if (primerClick) {
+        toggleMusica();
+        primerClick = false;
+      }
+    }, { once: true }); // Solo se ejecuta una vez
+  });
+</script>
 
 
 
