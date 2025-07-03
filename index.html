@@ -13,19 +13,31 @@
     <a href="https://waze.com/ul/h66j4d4201" target="_blank">📍 Llegar con Waze</a>
     <a href="https://milistadenovios.cl/enviar-regalo?id=26987" target="_blank">🎁 Enviar Regalo</a>
   </div>
-  <!-- Botón personalizado para reproducir música -->
+
+  <!-- Botón visible solo si se desea -->
   <button class="btn-musica" onclick="document.getElementById('bg-music').play(); this.style.display='none'">
     ▶ Reproducir música
   </button>
 
-  <!-- Audio oculto (solo se activa si el usuario hace clic) -->
+  <!-- Audio oculto -->
   <audio id="bg-music" loop>
     <source src="ensename-a-vivir.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
 
-  <!-- <audio autoplay loop>
-    <source src="ensename-a-vivir.mp3" type="audio/mpeg">
-  </audio> -->
+  <!-- Script para reproducción tras interacción -->
+  <script>
+    document.addEventListener('click', function reproducirMusica() {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.play().then(() => {
+          console.log("🎵 Música iniciada automáticamente");
+        }).catch(err => {
+          console.warn("🔇 Bloqueado por el navegador:", err);
+        });
+      }
+      document.removeEventListener('click', reproducirMusica);
+    });
+  </script>
 </body>
 </html>
