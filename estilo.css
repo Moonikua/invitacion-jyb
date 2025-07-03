@@ -23,23 +23,22 @@ body {
 }
 
 
-.btn-musica {
+.btn-musica-toggle {
   position: fixed;
-  bottom: 30px;
+  top: 20px;
   right: 30px;
-  padding: 12px 20px;
-  font-size: 14px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 16px;
+  font-size: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-.btn-musica:hover {
+.btn-musica-toggle:hover {
   background-color: #f0f0f0;
 }
+
 

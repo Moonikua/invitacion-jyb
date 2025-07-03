@@ -15,7 +15,8 @@
     <a href="img/InvitacionMatrimonioJB.pdf" download="Invitación-JyB.pdf" target="_blank">📄 Descargar invitación PDF</a>
   </div>
 
-  <button id="toggle-music" class="btn-musica">🔊 Activar música</button>
+ <a href="#" class="btn-musica-toggle" onclick="toggleMusica(event)" title="Activar/Desactivar música">🎵</a>
+
 
   <audio id="bg-music" loop>
     <source src="ensename-a-vivir.mp3" type="audio/mpeg">
@@ -26,19 +27,17 @@
 
   <!-- Script para reproducción tras interacción -->
   <script>
-    const btn = document.getElementById('toggle-music');
-    const audio = document.getElementById('bg-music');
-
-    btn.addEventListener('click', () => {
+    function toggleMusica(event) {
+      event.preventDefault(); // para evitar el salto arriba
+      const audio = document.getElementById('bg-music');
       if (audio.paused) {
-        audio.play();
-        btn.textContent = '🔇 Detener música';
+        audio.play().catch(err => console.warn("🔇 Bloqueado por el navegador:", err));
       } else {
         audio.pause();
-        btn.textContent = '🔊 Activar música';
       }
-    });
+    }
   </script>
+
 
 </body>
 </html>
