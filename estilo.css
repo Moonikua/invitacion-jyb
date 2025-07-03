@@ -25,9 +25,9 @@ body {
 
 .control-musica {
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 30px;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .btn-musica-toggle {

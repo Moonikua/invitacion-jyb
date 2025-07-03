@@ -31,15 +31,21 @@
   <!-- Script para reproducción tras interacción -->
   <script>
     function toggleMusica(event) {
-      event.preventDefault(); // para evitar el salto arriba
+      event.preventDefault();
       const audio = document.getElementById('bg-music');
+      const btn = document.querySelector('.btn-musica-toggle');
+
       if (audio.paused) {
-        audio.play().catch(err => console.warn("🔇 Bloqueado por el navegador:", err));
+        audio.play().then(() => {
+          btn.textContent = '🔇';
+        }).catch(err => console.warn("🔇 Bloqueado por el navegador:", err));
       } else {
         audio.pause();
+        btn.textContent = '🎵';
       }
     }
   </script>
+
 
 
 </body>
