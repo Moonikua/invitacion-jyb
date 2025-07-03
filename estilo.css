@@ -5,8 +5,8 @@ body {
 
 .botones {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
