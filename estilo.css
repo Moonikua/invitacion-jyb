@@ -1,38 +1,23 @@
-
-body, html {
+body {
   margin: 0;
-  padding: 0;
-  height: 100%;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.fondo {
-  background: url('img/fondo-invitacion.jpg') no-repeat center top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
+.botones {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 60px;
+  gap: 10px;
 }
-
 
 .botones a {
-  display: block;
-  margin: 10px;
-  padding: 12px 24px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 18px;
   text-decoration: none;
   color: #333;
-  border-radius: 8px;
-  font-size: 18px;
-  transition: background 0.3s ease;
-}
-
-.botones a:hover {
-  background: #ffe0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 }
