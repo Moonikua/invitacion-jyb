@@ -9,7 +9,7 @@ body {
   right: 30px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 30px;
 }
 
 .botones a {
