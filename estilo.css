@@ -25,12 +25,21 @@ body {
 
 .btn-musica {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  z-index: 999;
 }
+
 .btn-musica:hover {
   background-color: #f0f0f0;
 }
+
