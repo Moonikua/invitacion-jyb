@@ -1,55 +1,20 @@
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff8f0;
-  color: #333;
+body, html {
   margin: 0;
   padding: 0;
-  text-align: center;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.contenedor {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 2.2em;
-  margin-bottom: 0;
-}
-
-h2 {
-  font-weight: normal;
-  margin-top: 0;
-}
-
-h3 {
-  margin-top: 40px;
-  color: #b84f4f;
-}
-
-.boton {
-  display: inline-block;
-  background-color: #b84f4f;
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  margin: 10px 5px;
-}
-
-.fotos {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-}
-
-.fotos img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.fondo {
+  background: url('img/fondo-invitacion.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 60px;
 }
 
 .botones a {
@@ -64,25 +29,6 @@ h3 {
   transition: background 0.3s ease;
 }
 
-
-.btn-musica {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  font-size: 14px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  z-index: 999;
-  transition: background 0.3s ease;
+.botones a:hover {
+  background: #ffe0e0;
 }
-.btn-musica:hover {
-  background-color: #f0f0f0;
-}
-
-
