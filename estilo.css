@@ -69,3 +69,16 @@ h3 {
   background-color: #f0e6e6;
 }
 
+.botones a {
+  display: block;
+  margin: 10px;
+  padding: 12px 24px;
+  background: rgba(255,255,255,0.9);
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+
